@@ -1,0 +1,50 @@
+<!documentType html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+     <title>Sorting</title>
+     <style type="text/css">
+     
+         body{
+             text-align: center;
+             text-color: yellow;
+         }
+     </style>
+ </head>
+    <body background="https://www.publicdomainpictures.net/pictures/200000/velka/plain-red-background.jpg">
+      
+      <h1>Virtualizing  Sorting</h1>
+          
+        <li>Before sorting<p id="demo"></p></li>
+        <li>After sorting<P id="demo2"></P></li>
+        
+       <button type="button" onclick="bs()">Generate numbers</button>
+       <button type="button" onclick="bss()">sort numbers</button>
+  
+</script>
+
+        <script>
+           
+            var items = [];
+        function bs(){
+            
+        while(items.length < 8){
+        var randomnumber = Math.floor(Math.random()*100) + 1;
+        if(items.indexOf(randomnumber) > -1) continue;
+         items[items.length] = randomnumber;
+}
+  document.getElementById("demo").innerHTML = items;
+        }
+           
+                function bss(){
+                  items.sort(function(a, b){return a - b});
+                 document.getElementById("demo2").innerHTML = items;
+               
+                }
+        
+
+        
+      </script>
+        
+    </body>
+</html>
